@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_test
+    command: --max_allowed_packet=32M --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    ports:
+      - 33061:3306
+    volumes:
+      - $HOME/.local/containers/php:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=mytodos
