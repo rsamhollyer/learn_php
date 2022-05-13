@@ -1,0 +1,9 @@
+{
+	"name": "sam/app",
+	"autoload": {
+		"classmap": [
+			"./"
+		]
+	},
+	"require": {}
+}
