@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Arrays;
+
 class Post {
     public $title;
     public $published;

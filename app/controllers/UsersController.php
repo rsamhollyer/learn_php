@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\App;
+
 /**
  * 
  * @package 
@@ -8,7 +12,7 @@ class UsersController {
 
     public function index() {
         $users = App::get('database')->selectAll('users');
-        return view('users', compact('users')); //'users' => $users equivalent
+        return view('users', compact('users')); // ['users' => $users equivalent]
     }
 
     public function store() {

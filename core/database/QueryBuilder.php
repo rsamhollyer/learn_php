@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Core\Database;
+
+use Exception;
+use PDO;
 
 class QueryBuilder {
 
@@ -31,8 +35,8 @@ class QueryBuilder {
             $statement = $this->pdo->prepare($sql);
             // $statement->bindParam(':name', $parameters['name']);
             $statement->execute($parameters);
-        } catch (PDOException $e) {
-            die("Whoops, something went wrong. Please try again.");
+        } catch (Exception $e) {
+            throw new Exception("Error Processing Request", 1);
         }
     }
 }

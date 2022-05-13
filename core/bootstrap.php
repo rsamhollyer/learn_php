@@ -1,5 +1,7 @@
 <?php
 
+use App\Core\App;
+use App\Core\Database\{Connection, QueryBuilder};
 
 App::bind('config',  require 'config/config.php');
 
@@ -18,7 +20,7 @@ function view($name, $data = []) {
     $name='joe'; 
     $age = 20;
     */
-    return require "views/{$name}.view.php";
+    return require "app/views/{$name}.view.php";
 }
 
 
