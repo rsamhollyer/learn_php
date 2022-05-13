@@ -1,7 +1,16 @@
 <?php
+
+/**
+ *  Database Connection Class
+ * @package 
+ */
 class Connection {
 
-
+    /**
+     * 
+     * @param mixed $config 
+     * @return PDO 
+     */
     public static function make($config) {
 
         try {
